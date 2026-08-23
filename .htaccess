@@ -1,0 +1,30 @@
+# VTI-Infinix Website
+
+RewriteEngine On
+
+# Default homepage
+DirectoryIndex home.html
+
+# Disable directory listing
+Options -Indexes
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirect home.html to /
+RewriteCond %{THE_REQUEST} \s/+home\.html[\s?] [NC]
+RewriteRule ^home\.html$ / [R=301,L]
+
+# Redirect .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Don't rewrite real files/folders
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Clean URL -> HTML file
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/.]+)/?$ $1.html [L]
