@@ -1,36 +1,1491 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Technologies - VTI-Infinix Private Limited"><title>Technologies | VTI-Infinix</title><link rel="icon" href="images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Technologies - VTI-Infinix Private Limited"
+    >
+
+    <title>Technologies | VTI-Infinix</title>
+
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =====================================================
+           TECHNOLOGIES PAGE
+        ===================================================== */
+
+        .tech-page-hero {
+            padding: 150px 0 85px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 16, 34, .96),
+                    rgba(5, 16, 34, .78)
+                ),
+                url('images/hero/hero-tech.png') center/cover;
+            color: #fff;
+        }
+
+        .tech-page-hero .eyebrow {
+            color: #8bbcff;
+        }
+
+        .tech-page-hero h1 {
+            max-width: 850px;
+            margin: 14px 0 18px;
+            font-size: clamp(42px, 5vw, 64px);
+            line-height: 1.05;
+            letter-spacing: -.04em;
+        }
+
+        .tech-page-hero h1 span {
+            color: #4c9aff;
+        }
+
+        .tech-page-hero p {
+            max-width: 760px;
+            color: #d7e3f7;
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .tech-intro {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .tech-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .tech-image {
+            overflow: hidden;
+            border-radius: 22px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 440px;
+            object-fit: cover;
+        }
+
+        .tech-intro-content .title {
+            margin-bottom: 15px;
+        }
+
+        .tech-intro-content .lead {
+            margin-bottom: 28px;
+        }
+
+        .tech-points {
+            display: grid;
+            gap: 14px;
+        }
+
+        .tech-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+        }
+
+        .tech-point-icon {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: #eaf3ff;
+            color: var(--blue);
+        }
+
+        .tech-point strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .tech-point span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY CATEGORIES
+        ===================================================== */
+
+        .tech-stack-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .tech-stack-heading {
+            max-width: 720px;
+            margin-bottom: 50px;
+        }
+
+        .tech-stack-heading h2 {
+            margin: 12px 0 15px;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+        }
+
+        .tech-stack-heading p {
+            color: var(--muted);
+        }
+
+        .tech-category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .tech-category {
+            position: relative;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            transition: .3s ease;
+            overflow: hidden;
+        }
+
+        .tech-category::after {
+            content: "";
+            position: absolute;
+            right: -35px;
+            bottom: -35px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(10,111,255,.035);
+        }
+
+        .tech-category:hover {
+            transform: translateY(-6px);
+            border-color: #cfe0f7;
+            box-shadow: var(--shadow);
+        }
+
+        .tech-category-icon {
+            width: 54px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            background: #eaf3ff;
+            color: var(--blue);
+            font-size: 21px;
+        }
+
+        .tech-category:nth-child(2n) .tech-category-icon {
+            background: #fff3e6;
+            color: #d89000;
+        }
+
+        .tech-category:nth-child(3n) .tech-category-icon {
+            background: #eaf9f0;
+            color: var(--green);
+        }
+
+        .tech-category h3 {
+            margin-bottom: 8px;
+            font-size: 19px;
+        }
+
+        .tech-category > p {
+            min-height: 66px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
+        }
+
+        .tech-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border: 1px solid #e6edf5;
+            border-radius: 8px;
+            background: #fafcff;
+            color: #344054;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        .tech-item i {
+            color: var(--blue);
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY LIST
+        ===================================================== */
+
+        .tech-capabilities {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .tech-capabilities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .tech-capabilities-content h2 {
+            margin: 12px 0 16px;
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.1;
+        }
+
+        .tech-capabilities-content > p {
+            color: var(--muted);
+            max-width: 620px;
+        }
+
+        .capability-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .capability {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 11px;
+            background: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .capability i {
+            color: var(--green);
+        }
+
+        .tech-capabilities-visual {
+            padding: 35px;
+            border-radius: 22px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #071326,
+                    #0d2342
+                );
+            color: #fff;
+            box-shadow: 0 25px 70px rgba(7,35,75,.16);
+        }
+
+        .tech-capabilities-visual h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .tech-capabilities-visual > p {
+            margin-bottom: 25px;
+            color: #b9c9dc;
+            font-size: 13px;
+        }
+
+        .tech-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .tech-metric {
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 12px;
+            background: rgba(255,255,255,.045);
+        }
+
+        .tech-metric strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #4da3ff;
+            font-size: 25px;
+        }
+
+        .tech-metric span {
+            color: #b9c9dc;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           APPROACH
+        ===================================================== */
+
+        .tech-approach {
+            padding: 95px 0;
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .tech-approach-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .tech-approach-heading h2 {
+            margin: 12px 0;
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.1;
+        }
+
+        .tech-approach-heading p {
+            color: #aab8cb;
+        }
+
+        .tech-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .tech-process {
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 15px;
+            background: rgba(255,255,255,.04);
+        }
+
+        .tech-process-number {
+            color: #4da3ff;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .tech-process h3 {
+            margin: 14px 0 8px;
+            font-size: 17px;
+        }
+
+        .tech-process p {
+            color: #aab8cb;
+            font-size: 12.5px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .tech-cta {
+            padding: 85px 0;
+            background: var(--light);
+            text-align: center;
+        }
+
+        .tech-cta h2 {
+            max-width: 720px;
+            margin: 0 auto 15px;
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.1;
+        }
+
+        .tech-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .tech-category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 820px) {
+
+            .tech-intro-grid,
+            .tech-capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-image {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .tech-category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .tech-page-hero {
+                padding: 125px 0 65px;
+            }
+
+            .tech-intro,
+            .tech-stack-section,
+            .tech-capabilities {
+                padding: 70px 0;
+            }
+
+            .tech-approach {
+                padding: 70px 0;
+            }
+
+            .tech-category-grid,
+            .tech-process-grid,
+            .capability-list,
+            .tech-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-image img {
+                min-height: 280px;
+            }
+
+            .tech-category,
+            .tech-capabilities-visual {
+                padding: 23px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="navbar">
-  <div class="container nav-inner">
-    <a class="brand" href="home.html"><img src="images/logo.png" alt="VTI-Infinix Private Limited"></a>
-    <button class="menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-    <ul class="menu">
-       <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="technologies.html">Technologies</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="clients.html">Our Clients</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </div>
+
+    <div class="container nav-inner">
+
+        <a class="brand" href="index.html">
+            <img
+                src="images/logo.png"
+                alt="VTI-Infinix Private Limited"
+            >
+        </a>
+
+        <button
+            class="menu-btn"
+            aria-label="Open menu"
+            type="button"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a
+                    href="technologies.html"
+                    class="active"
+                >
+                    Technologies
+                </a>
+            </li>
+
+            <li>
+                <a href="industries.html">Industries</a>
+            </li>
+
+            <li>
+                <a href="clients.html">Our Clients</a>
+            </li>
+
+            <li>
+                <a href="careers.html">Careers</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+
+        </ul>
+
+    </div>
+
 </header>
 
-<main><section class="page-hero"><div class="container"><div class="eyebrow" style="color:#8bbcff">Engineering Stack</div><h1>Technologies</h1><p>A flexible technology landscape covering development, quality engineering, cloud and digital capabilities.</p></div></section>
-<section class="section"><div class="container split"><div class="image-card reveal"><img src="images/technologies/technology-stack.png" alt="Technology stack"></div><div class="reveal"><div class="eyebrow">Technology Areas</div><h2 class="title">The right tools for the right problem.</h2><p class="lead">Technology selection should follow the product, architecture, team and business requirements. Our capability areas include:</p><div class="tech-list"><div class="tech"><i class="fa-brands fa-java"></i>Java</div><div class="tech"><i class="fa-brands fa-python"></i>Python</div><div class="tech"><i class="fa-brands fa-js"></i>JavaScript</div><div class="tech"><i class="fa-solid fa-code"></i>TypeScript</div><div class="tech"><i class="fa-brands fa-react"></i>React</div><div class="tech"><i class="fa-brands fa-angular"></i>Angular</div><div class="tech"><i class="fa-brands fa-node-js"></i>Node.js</div><div class="tech"><i class="fa-solid fa-vial"></i>Selenium</div><div class="tech"><i class="fa-solid fa-play"></i>Playwright</div><div class="tech"><i class="fa-solid fa-cloud"></i>Cloud</div><div class="tech"><i class="fa-solid fa-database"></i>Databases</div><div class="tech"><i class="fa-solid fa-brain"></i>AI & Digital</div></div></div></div></section></main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="images/logo.png" alt="VTI-Infinix">
-        <p>Technology-driven solutions for modern businesses, with a focus on quality, reliability and digital transformation.</p>
-        <div class="social"><a href="https://www.linkedin.com/company/vti-infinix/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div>
-      </div>
-      <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="technologies.html">Technologies</a></li><li><a href="industries.html">Industries</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-      <div><h4>Services</h4><ul class="footer-links"><li><a href="services.html#software">Software Development</a></li><li><a href="services.html#web">Web Development</a></li><li><a href="services.html#qa">QA & Testing</a></li><li><a href="services.html#cloud">Cloud & Digital</a></li></ul></div>
-      <div><h4>Get in Touch</h4><ul class="footer-links"><li><a href="contact.html">Business Enquiry</a></li><li><a href="contact.html">Contact Information</a></li><li><a href="contact.html">Send a Message</a></li></ul></div>
+
+<main>
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="tech-page-hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Engineering Stack
+        </div>
+
+        <h1>
+            Technologies that
+            <span>power modern solutions.</span>
+        </h1>
+
+        <p>
+            A flexible technology landscape covering application development,
+            quality engineering, cloud, data and digital capabilities.
+            We select technologies based on the product, architecture,
+            team and business requirements.
+        </p>
+
     </div>
-    <div class="copyright"><span>© <span data-year></span> VTI-Infinix Private Limited. All rights reserved.</span><span>Empowering Businesses with Innovative IT Solutions.</span></div>
-  </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="tech-intro">
+
+    <div class="container tech-intro-grid">
+
+        <div class="tech-image reveal">
+
+            <img
+                src="images/technologies/technology-stack.png"
+                alt="VTI-Infinix technology stack"
+            >
+
+        </div>
+
+
+        <div class="tech-intro-content reveal">
+
+            <div class="eyebrow">
+                Technology Areas
+            </div>
+
+            <h2 class="title">
+                The right tools for the right problem.
+            </h2>
+
+            <p class="lead">
+                Technology selection should follow the product,
+                architecture, team and business requirements.
+                Our engineering capabilities cover modern software
+                development, testing, cloud and digital technologies.
+            </p>
+
+
+            <div class="tech-points">
+
+                <div class="tech-point">
+
+                    <div class="tech-point-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+                        <strong>Modern Technology Stack</strong>
+                        <span>
+                            Flexible technologies for modern applications
+                            and enterprise solutions.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="tech-point">
+
+                    <div class="tech-point-icon">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+
+                    <div>
+                        <strong>Scalable Architecture</strong>
+                        <span>
+                            Technology choices designed around reliability,
+                            scalability and maintainability.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="tech-point">
+
+                    <div class="tech-point-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Quality First</strong>
+                        <span>
+                            Automation and engineering practices that
+                            improve software quality.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="tech-point">
+
+                    <div class="tech-point-icon">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+
+                    <div>
+                        <strong>Future Ready</strong>
+                        <span>
+                            Technology capabilities that can evolve with
+                            changing business requirements.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TECHNOLOGY STACK
+===================================================== -->
+
+<section class="tech-stack-section">
+
+    <div class="container">
+
+        <div class="tech-stack-heading reveal">
+
+            <div class="eyebrow">
+                Our Technology Stack
+            </div>
+
+            <h2>
+                Engineering capabilities across the stack.
+            </h2>
+
+            <p>
+                Our technology capabilities span development, frontend,
+                backend, quality engineering, cloud infrastructure,
+                databases and intelligent digital solutions.
+            </p>
+
+        </div>
+
+
+        <div class="tech-category-grid">
+
+
+            <!-- SOFTWARE DEVELOPMENT -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>
+                    Software Development
+                </h3>
+
+                <p>
+                    Languages and technologies for robust enterprise
+                    and business applications.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-java"></i>
+                        Java
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-python"></i>
+                        Python
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-code"></i>
+                        C / C++
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-database"></i>
+                        SQL
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- WEB DEVELOPMENT -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Modern frontend and backend technologies for
+                    responsive digital experiences.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-js"></i>
+                        JavaScript
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-code"></i>
+                        TypeScript
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-react"></i>
+                        React
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-angular"></i>
+                        Angular
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        Node.js
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- QUALITY ENGINEERING -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+
+                <h3>
+                    Quality Engineering
+                </h3>
+
+                <p>
+                    Testing and automation technologies focused on
+                    reliability and software quality.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-vial"></i>
+                        Selenium
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-play"></i>
+                        Playwright
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-check-double"></i>
+                        Automation
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-bug"></i>
+                        Functional Testing
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLOUD -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+
+                <h3>
+                    Cloud & Infrastructure
+                </h3>
+
+                <p>
+                    Cloud and infrastructure capabilities for scalable
+                    and reliable applications.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-cloud"></i>
+                        Cloud
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-server"></i>
+                        Infrastructure
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-gears"></i>
+                        DevOps
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-network-wired"></i>
+                        Networking
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- DATA -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>
+                    Data & Databases
+                </h3>
+
+                <p>
+                    Data technologies supporting applications,
+                    analytics and business intelligence.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-database"></i>
+                        Databases
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-table"></i>
+                        SQL
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Analytics
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-server"></i>
+                        Data Systems
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- AI -->
+
+            <article class="tech-category reveal">
+
+                <div class="tech-category-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>
+                    AI & Digital
+                </h3>
+
+                <p>
+                    Intelligent and digital capabilities for solving
+                    modern business challenges.
+                </p>
+
+                <div class="tech-items">
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-brain"></i>
+                        AI
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-robot"></i>
+                        Machine Learning
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Data Analytics
+                    </span>
+
+                    <span class="tech-item">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Digital Solutions
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAPABILITIES
+===================================================== -->
+
+<section class="tech-capabilities">
+
+    <div class="container tech-capabilities-grid">
+
+        <div class="tech-capabilities-content reveal">
+
+            <div class="eyebrow">
+                Engineering Capabilities
+            </div>
+
+            <h2>
+                Technology backed by engineering discipline.
+            </h2>
+
+            <p>
+                We don't select technology simply because it is new.
+                Our approach considers business objectives, scalability,
+                maintainability, performance, security and long-term
+                product requirements.
+            </p>
+
+
+            <div class="capability-list">
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    Application Development
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    Web Development
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    API Development
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    QA Automation
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    Cloud Solutions
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    Data & Analytics
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    AI & Digital
+                </div>
+
+                <div class="capability">
+                    <i class="fa-solid fa-check"></i>
+                    System Integration
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="tech-capabilities-visual reveal">
+
+            <h3>
+                Technology with purpose.
+            </h3>
+
+            <p>
+                Our focus is not on using the largest number of technologies.
+                It is on choosing the technologies that create the right
+                technical and business outcome.
+            </p>
+
+
+            <div class="tech-metrics">
+
+                <div class="tech-metric">
+
+                    <strong>01</strong>
+
+                    <span>
+                        Business-first technology selection
+                    </span>
+
+                </div>
+
+
+                <div class="tech-metric">
+
+                    <strong>02</strong>
+
+                    <span>
+                        Scalable architecture
+                    </span>
+
+                </div>
+
+
+                <div class="tech-metric">
+
+                    <strong>03</strong>
+
+                    <span>
+                        Quality engineering
+                    </span>
+
+                </div>
+
+
+                <div class="tech-metric">
+
+                    <strong>04</strong>
+
+                    <span>
+                        Long-term maintainability
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPROACH
+===================================================== -->
+
+<section class="tech-approach">
+
+    <div class="container">
+
+        <div class="tech-approach-heading reveal">
+
+            <div class="eyebrow">
+                Our Approach
+            </div>
+
+            <h2>
+                From requirement to reliable solution.
+            </h2>
+
+            <p>
+                Technology decisions are connected to every stage of
+                engineering, from discovery and architecture through
+                development, testing and continuous improvement.
+            </p>
+
+        </div>
+
+
+        <div class="tech-process-grid">
+
+            <div class="tech-process reveal">
+
+                <span class="tech-process-number">
+                    01
+                </span>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Understand business goals, users, requirements
+                    and technical constraints.
+                </p>
+
+            </div>
+
+
+            <div class="tech-process reveal">
+
+                <span class="tech-process-number">
+                    02
+                </span>
+
+                <h3>
+                    Architect
+                </h3>
+
+                <p>
+                    Define the architecture and identify technologies
+                    appropriate for the solution.
+                </p>
+
+            </div>
+
+
+            <div class="tech-process reveal">
+
+                <span class="tech-process-number">
+                    03
+                </span>
+
+                <h3>
+                    Engineer
+                </h3>
+
+                <p>
+                    Develop, integrate and test the solution using
+                    disciplined engineering practices.
+                </p>
+
+            </div>
+
+
+            <div class="tech-process reveal">
+
+                <span class="tech-process-number">
+                    04
+                </span>
+
+                <h3>
+                    Evolve
+                </h3>
+
+                <p>
+                    Monitor, optimize and continuously improve the
+                    technology solution as requirements evolve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="tech-cta">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            BUILD WITH THE RIGHT TECHNOLOGY
+        </div>
+
+        <h2>
+            Have a technology challenge?
+        </h2>
+
+        <p>
+            Let's identify the right technology approach for your
+            business requirements and build a solution designed
+            for long-term value.
+        </p>
+
+        <a
+            href="contact.html"
+            class="btn primary"
+        >
+            Start a Conversation
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/logo.png"
+                    alt="VTI-Infinix"
+                >
+
+                <p>
+                    Technology-driven solutions for modern businesses,
+                    with a focus on quality, reliability and digital
+                    transformation.
+                </p>
+
+                <div class="social">
+
+                    <a
+                        href="https://www.linkedin.com/company/vti-infinix/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h4>Company</h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="technologies.html">
+                            Technologies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="industries.html">
+                            Industries
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="careers.html">
+                            Careers
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Services</h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="services.html#software">
+                            Software Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html#web">
+                            Web Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html#qa">
+                            QA & Testing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html#cloud">
+                            Cloud & Digital
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Get in Touch</h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="contact.html">
+                            Business Enquiry
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Send a Message
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span>
+                © <span data-year></span>
+                VTI-Infinix Private Limited.
+                All rights reserved.
+            </span>
+
+            <span>
+                Empowering Businesses with Innovative IT Solutions.
+            </span>
+
+        </div>
+
+    </div>
+
 </footer>
-<script src="js/script.js"></script></body></html>
+
+
+<script src="js/script.js"></script>
+
+</body>
