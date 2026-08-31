@@ -1,7 +1,8 @@
+```css
 /* =========================================================
    VTI-INFINIX
    GLOBAL WEBSITE STYLES
-   INDUSTRIES PAGE — NO IMAGE VERSION
+   INDUSTRIES PAGE
    ========================================================= */
 
 /* =========================================================
@@ -110,28 +111,23 @@ select {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     color: var(--blue);
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-
     margin-bottom: 12px;
 }
 
 .eyebrow::before {
     content: "";
-
     width: 28px;
     height: 3px;
-
     background: linear-gradient(
         90deg,
         var(--blue),
         var(--yellow)
     );
-
     border-radius: 10px;
 }
 
@@ -143,9 +139,7 @@ select {
 .title {
     font-size: clamp(30px, 4vw, 46px);
     line-height: 1.15;
-
     margin-bottom: 18px;
-
     font-weight: 800;
 }
 
@@ -191,13 +185,10 @@ select {
 
 .navbar {
     position: fixed;
-
     top: 0;
     left: 0;
     right: 0;
-
     z-index: 1000;
-
     height: 82px;
 
     background: rgba(255, 255, 255, 0.98);
@@ -215,7 +206,6 @@ select {
 
 .nav-inner {
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -240,30 +230,23 @@ select {
     display: flex;
     align-items: center;
     gap: 25px;
-
     list-style: none;
 }
 
 .menu a {
     position: relative;
-
     display: block;
-
     padding: 29px 0;
 
     font-size: 14px;
     font-weight: 700;
-
     color: #172033;
-
     white-space: nowrap;
 }
 
 .menu a::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: 21px;
 
@@ -292,7 +275,6 @@ select {
 
 .menu-btn {
     display: none;
-
     border: none;
     background: transparent;
 
@@ -333,11 +315,9 @@ select {
 
 .hero-grid {
     display: grid;
-
     grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
-
     gap: 50px;
 }
 
@@ -350,7 +330,6 @@ select {
     color: #ffffff;
 
     font-size: clamp(44px, 6vw, 76px);
-
     line-height: 1.02;
 
     margin-bottom: 22px;
@@ -371,7 +350,6 @@ select {
     color: #d7e3f7;
 
     font-size: 18px;
-
     max-width: 650px;
 }
 
@@ -382,9 +360,7 @@ select {
 
 .actions {
     display: flex;
-
     gap: 14px;
-
     flex-wrap: wrap;
 
     margin-top: 30px;
@@ -397,20 +373,16 @@ select {
 
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 9px;
 
     padding: 13px 22px;
 
     border-radius: 9px;
-
     border: 2px solid var(--blue);
 
     font-weight: 800;
-
     font-size: 14px;
 
     cursor: pointer;
@@ -425,19 +397,16 @@ select {
 
 .btn.primary:hover {
     background: var(--blue2);
-
     transform: translateY(-2px);
 }
 
 .btn.outline {
     color: #ffffff;
-
     border-color: rgba(255, 255, 255, 0.55);
 }
 
 .btn.outline:hover {
     background: #ffffff;
-
     color: var(--blue);
 }
 
@@ -452,7 +421,6 @@ select {
     background: rgba(255, 255, 255, 0.08);
 
     border: 1px solid rgba(255, 255, 255, 0.15);
-
     border-radius: 24px;
 
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
@@ -460,7 +428,6 @@ select {
 
 .hero-card img {
     width: 100%;
-
     border-radius: 15px;
 }
 
@@ -473,7 +440,6 @@ select {
     background: #ffffff;
 
     border: 1px solid var(--line);
-
     border-radius: var(--radius);
 
     padding: 28px;
@@ -506,7 +472,6 @@ select {
     border-radius: 14px;
 
     background: #eaf3ff;
-
     color: var(--blue);
 
     font-size: 22px;
@@ -516,25 +481,21 @@ select {
 
 .card h3 {
     font-size: 19px;
-
     margin-bottom: 8px;
 }
 
 .card p {
     color: var(--muted);
-
     font-size: 14px;
 }
 
 .card p.proof {
     margin-top: 10px;
-
     padding-top: 10px;
 
     border-top: 1px dashed var(--line);
 
     font-style: italic;
-
     font-size: 12.5px;
 
     color: var(--blue);
@@ -567,7 +528,6 @@ select {
 
 .split {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
@@ -604,7 +564,6 @@ select {
 
 .checks {
     display: grid;
-
     gap: 12px;
 
     margin-top: 24px;
@@ -612,7 +571,6 @@ select {
 
 .check {
     display: flex;
-
     gap: 12px;
 
     align-items: flex-start;
@@ -620,7 +578,6 @@ select {
 
 .check i {
     color: var(--green);
-
     margin-top: 5px;
 }
 
@@ -631,7 +588,6 @@ select {
 
 .stat-row {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
 
     gap: 15px;
@@ -643,7 +599,6 @@ select {
     padding: 18px;
 
     border: 1px solid var(--line);
-
     border-radius: 14px;
 
     background: #ffffff;
@@ -659,7 +614,6 @@ select {
 
 .stat span {
     font-size: 12px;
-
     color: var(--muted);
 }
 
@@ -682,9 +636,7 @@ select {
         url("../images/hero/industries-solutions.png");
 
     background-position: center;
-
     background-size: cover;
-
     background-repeat: no-repeat;
 }
 
@@ -705,18 +657,17 @@ select {
 
 /* =========================================================
    INDUSTRIES PAGE HEADER
-   NO IMAGE VERSION
+   TELECOM IMAGE BACKGROUND
    ========================================================= */
 
 .page-header {
     position: relative;
 
-    min-height: 300px;
+    min-height: 380px;
 
-    padding: 110px 0 55px;
+    padding: 125px 0 65px;
 
     display: flex;
-
     align-items: center;
 
     overflow: hidden;
@@ -725,37 +676,50 @@ select {
 
     text-align: left;
 
-    background:
+    /*
+       YOUR ACTUAL IMAGE:
+       images/industry/telecom.webp
+    */
+
+    background-image:
         linear-gradient(
-            135deg,
-            #071326 0%,
-            #0b2345 55%,
-            #0a6fff 140%
-        );
+            90deg,
+            rgba(5, 16, 34, 0.94) 0%,
+            rgba(5, 16, 34, 0.78) 45%,
+            rgba(5, 16, 34, 0.52) 100%
+        ),
+        url("../images/industry/telecom.webp");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-/* subtle decorative glow */
+/* =========================================================
+   PAGE HEADER OVERLAY
+   ========================================================= */
 
-.page-header::before {
+.page-header::after {
     content: "";
 
     position: absolute;
+    inset: 0;
 
-    width: 500px;
-    height: 500px;
-
-    right: -180px;
-    top: -260px;
-
-    background: rgba(10, 111, 255, 0.18);
-
-    border-radius: 50%;
-
-    filter: blur(20px);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 19, 38, 0.25),
+            transparent 60%
+        );
 
     pointer-events: none;
 }
+
+
+/* =========================================================
+   PAGE HEADER CONTENT
+   ========================================================= */
 
 .page-header .container {
     position: relative;
@@ -784,7 +748,7 @@ select {
 
     margin: 0;
 
-    color: #c9d8eb;
+    color: #d9e5f5;
 
     font-size: 16px;
 
@@ -914,7 +878,6 @@ select {
 
 /* =========================================================
    INDUSTRIES GRID
-   DESKTOP = 2 COLUMNS
    ========================================================= */
 
 .industries-grid {
@@ -930,7 +893,6 @@ select {
 
 /* =========================================================
    INDUSTRY CARD
-   NO IMAGE VERSION
    ========================================================= */
 
 .industry-card {
@@ -1056,7 +1018,6 @@ select {
     height: 58px;
 
     display: grid;
-
     place-items: center;
 
     margin-bottom: auto;
@@ -1816,9 +1777,11 @@ footer {
     }
 
     .page-header {
-        min-height: 300px;
+        min-height: 330px;
 
-        padding: 105px 0 55px;
+        padding: 110px 0 55px;
+
+        background-position: center;
     }
 }
 
@@ -1915,9 +1878,11 @@ footer {
     }
 
     .page-header {
-        min-height: 300px;
+        min-height: 330px;
 
         padding: 105px 0 55px;
+
+        background-position: center;
     }
 
     .page-header h1 {
@@ -1971,7 +1936,7 @@ footer {
 @media (max-width: 600px) {
 
     .page-header {
-        min-height: 330px;
+        min-height: 360px;
 
         padding: 100px 0 60px;
 
@@ -2099,6 +2064,8 @@ footer {
         min-height: 350px;
 
         padding: 100px 0 55px;
+
+        background-position: center center;
     }
 
     .page-header h1 {
@@ -2201,3 +2168,4 @@ footer {
         animation-iteration-count: 1 !important;
     }
 }
+```
