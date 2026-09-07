@@ -12,6 +12,7 @@
 
     <link rel="icon" href="images/favicon.png">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -19,10 +20,12 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -96,7 +99,9 @@
 
     <main>
 
-        <!-- PAGE HERO -->
+        <!-- =================================================
+             PAGE HERO
+        ================================================== -->
 
         <section class="page-hero">
 
@@ -160,7 +165,6 @@
                                 <b>
                                     VTI-Infinix Private Limited
                                 </b>
-
                                 <small></small>
                             </div>
 
@@ -177,7 +181,6 @@
                                 <b>
                                     Pune, Maharashtra, India
                                 </b>
-
                                 <small></small>
                             </div>
 
@@ -194,7 +197,6 @@
                                 <b>
                                     info@vti-infinix.com
                                 </b>
-
                                 <small></small>
                             </div>
 
@@ -211,7 +213,6 @@
                                 <b>
                                     9145103615
                                 </b>
-
                                 <small></small>
                             </div>
 
@@ -266,8 +267,11 @@
                                 autocomplete="organization">
 
 
+                            <!-- PHONE NUMBER -->
+
                             <input
                                 type="tel"
+                                id="phone"
                                 name="phone"
                                 placeholder="Phone Number"
                                 inputmode="numeric"
@@ -276,7 +280,6 @@
                                 minlength="10"
                                 maxlength="10"
                                 required
-                                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                                 title="Please enter a valid 10-digit phone number">
 
                         </div>
@@ -325,7 +328,6 @@
                         <!-- BUDGET + TIMELINE -->
 
                         <div class="fields">
-
 
                             <!-- ESTIMATED BUDGET -->
 
@@ -605,10 +607,15 @@
             <div class="copyright">
 
                 <span>
+
                     ©
+
                     <span data-year></span>
+
                     VTI-Infinix Private Limited.
+
                     All rights reserved.
+
                 </span>
 
                 <span>
@@ -623,19 +630,18 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT
+         MAIN JAVASCRIPT
     ====================================================== -->
 
     <script src="js/script.js"></script>
 
 
     <!-- =====================================================
-         FORM VALIDATION
-         Keeps validation working even if script.js
-         handles the demo form submission.
+         CONTACT FORM VALIDATION
     ====================================================== -->
 
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
 
             const form = document.querySelector("[data-demo-form]");
@@ -645,18 +651,16 @@
             }
 
             const phone = form.querySelector('input[name="phone"]');
-
             const service = form.querySelector('select[name="service"]');
-
             const budget = form.querySelector('select[name="budget"]');
-
             const timeline = form.querySelector('select[name="timeline"]');
-
             const status = form.querySelector(".form-status");
 
 
             /* =============================================
-               PHONE — ONLY NUMBERS
+               PHONE NUMBER
+               ONLY NUMBERS
+               MAXIMUM 10 DIGITS
             ============================================== */
 
             if (phone) {
@@ -664,7 +668,42 @@
                 phone.addEventListener("input", function () {
 
                     this.value = this.value
-                        .replace(/[^0-9]/g, "")
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+
+                });
+
+
+                /* Prevent invalid pasted content */
+
+                phone.addEventListener("paste", function () {
+
+                    const input = this;
+
+                    setTimeout(function () {
+
+                        input.value = input.value
+                            .replace(/\D/g, "")
+                            .slice(0, 10);
+
+                    }, 0);
+
+                });
+
+
+                /* Prevent invalid dropped content */
+
+                phone.addEventListener("drop", function (event) {
+
+                    event.preventDefault();
+
+                    const input = this;
+                    const text = event.dataTransfer.getData("text");
+
+                    input.value = (
+                        input.value + text
+                    )
+                        .replace(/\D/g, "")
                         .slice(0, 10);
 
                 });
@@ -679,20 +718,14 @@
             form.addEventListener("submit", function (event) {
 
                 /*
-                 * Stop the form immediately if any required
-                 * field is invalid.
+                 * Stop the form if any required field
+                 * is invalid.
                  */
 
                 if (!form.checkValidity()) {
 
                     event.preventDefault();
-
                     event.stopImmediatePropagation();
-
-                    /*
-                     * Let the browser show the appropriate
-                     * validation message.
-                     */
 
                     form.reportValidity();
 
@@ -700,14 +733,13 @@
                 }
 
 
-                /*
-                 * Extra phone validation.
-                 */
+                /* =========================================
+                   EXTRA PHONE VALIDATION
+                ========================================== */
 
                 if (phone && !/^[0-9]{10}$/.test(phone.value)) {
 
                     event.preventDefault();
-
                     event.stopImmediatePropagation();
 
                     phone.setCustomValidity(
@@ -722,14 +754,13 @@
                 }
 
 
-                /*
-                 * Requirement validation.
-                 */
+                /* =========================================
+                   REQUIREMENT VALIDATION
+                ========================================== */
 
                 if (service && service.value === "") {
 
                     event.preventDefault();
-
                     event.stopImmediatePropagation();
 
                     service.setCustomValidity(
@@ -744,14 +775,13 @@
                 }
 
 
-                /*
-                 * Budget validation.
-                 */
+                /* =========================================
+                   BUDGET VALIDATION
+                ========================================== */
 
                 if (budget && budget.value === "") {
 
                     event.preventDefault();
-
                     event.stopImmediatePropagation();
 
                     budget.setCustomValidity(
@@ -766,14 +796,13 @@
                 }
 
 
-                /*
-                 * Timeline validation.
-                 */
+                /* =========================================
+                   TIMELINE VALIDATION
+                ========================================== */
 
                 if (timeline && timeline.value === "") {
 
                     event.preventDefault();
-
                     event.stopImmediatePropagation();
 
                     timeline.setCustomValidity(
@@ -790,6 +819,7 @@
             }, true);
 
         });
+
     </script>
 
 </body>
