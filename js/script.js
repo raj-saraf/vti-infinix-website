@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add('js-ready');
     const menuBtn = document.querySelector('.menu-btn');
     const menu = document.querySelector('.menu');
     const year = document.querySelectorAll('[data-year]');

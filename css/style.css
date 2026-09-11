@@ -2450,3 +2450,177 @@ a.btn {
         color: #d7e3f7;
     }
 }
+
+/* =========================================================
+   FINAL CONTRAST / VISIBILITY AUDIT
+   ========================================================= */
+
+/* Dark sections contain white cards: card content must stay dark. */
+.section.dark .card {
+    background: #ffffff;
+    color: var(--ink);
+}
+
+.section.dark .card h1,
+.section.dark .card h2,
+.section.dark .card h3,
+.section.dark .card h4,
+.section.dark .card h5,
+.section.dark .card h6 {
+    color: var(--ink);
+}
+
+.section.dark .card p,
+.section.dark .card .lead,
+.section.dark .card .meta {
+    color: #475467;
+}
+
+.section.dark .card .tag {
+    color: #0759d8;
+    background: #eaf3ff;
+}
+
+/* Keep icons/checks readable inside white cards on dark sections. */
+.section.dark .card .icon,
+.section.dark .card .check i {
+    color: var(--blue);
+}
+
+/* Light sections: prevent accidental white inherited text. */
+.section:not(.dark) h1,
+.section:not(.dark) h2,
+.section:not(.dark) h3,
+.section:not(.dark) h4,
+.section:not(.dark) h5,
+.section:not(.dark) h6 {
+    color: var(--ink);
+}
+
+.section:not(.dark) .eyebrow {
+    color: var(--blue);
+}
+
+/* Explicit contrast for common text blocks. */
+.section:not(.dark) .check,
+.section:not(.dark) .check span,
+.section:not(.dark) .card {
+    color: var(--ink);
+}
+
+.section:not(.dark) .card h3 {
+    color: var(--ink);
+}
+
+.section:not(.dark) .card p {
+    color: #475467;
+}
+
+/* CTA buttons must remain visible against both light and dark areas. */
+.section .btn.primary,
+.card .btn.primary,
+a.btn.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 20px;
+    background: var(--blue);
+    color: #ffffff;
+    border: 2px solid var(--blue);
+    border-radius: 9px;
+    font-weight: 800;
+    text-decoration: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+.section .btn.primary:hover,
+.card .btn.primary:hover,
+a.btn.primary:hover {
+    background: var(--blue2);
+    color: #ffffff;
+    border-color: var(--blue2);
+}
+
+/* Careers: never let the action disappear when the row becomes a column. */
+.job {
+    min-width: 0;
+}
+
+.job > div {
+    min-width: 0;
+}
+
+.job .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+/* Contact form fields should have readable typed text and placeholders. */
+.form input,
+.form textarea,
+.form select {
+    color: var(--ink);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #667085;
+    opacity: 1;
+}
+
+/* Dark technology/industry cards retain their intended light text. */
+.industry-card h3,
+.industry-card p,
+.industry-card .industry-services span,
+.tech-approach h2,
+.tech-approach h3,
+.tech-approach p {
+    text-shadow: none;
+}
+
+/* Prevent reveal animation from leaving content permanently invisible. */
+.reveal {
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal,
+    .card,
+    .btn {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* Reveal animation is opt-in only when JavaScript is working.
+   Without JS, content remains visible instead of being stuck at opacity:0. */
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.js-ready .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+}
+
+.js-ready .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js-ready .reveal,
+    .js-ready .reveal.show {
+        opacity: 1;
+        transform: none;
+        transition: none !important;
+    }
+}
