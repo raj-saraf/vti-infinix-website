@@ -49,7 +49,9 @@
                 class="menu-btn"
                 aria-label="Open menu"
                 type="button">
+
                 <i class="fa-solid fa-bars"></i>
+
             </button>
 
             <ul class="menu">
@@ -83,7 +85,11 @@
                 </li>
 
                 <li>
-                    <a href="contact.html">Contact Us</a>
+                    <a
+                        href="contact.html"
+                        class="active">
+                        Contact Us
+                    </a>
                 </li>
 
             </ul>
@@ -110,7 +116,9 @@
                 <div
                     class="eyebrow"
                     style="color:#8bbcff">
+
                     Get in Touch
+
                 </div>
 
                 <h1>Contact Us</h1>
@@ -162,10 +170,13 @@
                             <i class="fa-solid fa-building"></i>
 
                             <div>
+
                                 <b>
                                     VTI-Infinix Private Limited
                                 </b>
+
                                 <small></small>
+
                             </div>
 
                         </div>
@@ -178,10 +189,13 @@
                             <i class="fa-solid fa-location-dot"></i>
 
                             <div>
+
                                 <b>
                                     Pune, Maharashtra, India
                                 </b>
+
                                 <small></small>
+
                             </div>
 
                         </div>
@@ -194,10 +208,13 @@
                             <i class="fa-solid fa-envelope"></i>
 
                             <div>
+
                                 <b>
                                     info@vti-infinix.com
                                 </b>
+
                                 <small></small>
+
                             </div>
 
                         </div>
@@ -210,10 +227,15 @@
                             <i class="fa-solid fa-phone"></i>
 
                             <div>
+
                                 <b>
-                                    9145103615
+                                    +91 9145103615
                                 </b>
-                                <small></small>
+
+                                <small>
+                                    India
+                                </small>
+
                             </div>
 
                         </div>
@@ -267,22 +289,268 @@
                                 autocomplete="organization">
 
 
-                            <!-- PHONE NUMBER -->
+                            <!-- =================================
+                                 COUNTRY + PHONE
+                            ================================== -->
 
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="Phone Number"
-                                inputmode="numeric"
-                                autocomplete="tel"
-                                pattern="[0-9]{10}"
-                                minlength="10"
-                                maxlength="10"
-                                required
-                                title="Please enter a valid 10-digit phone number">
+                            <div class="phone-group">
+
+                                <select
+                                    id="country"
+                                    name="country"
+                                    class="country-code"
+                                    aria-label="Country code"
+                                    required>
+
+                                    <!-- ASIA -->
+
+                                    <option value="+91" selected>
+                                        🇮🇳 India (+91)
+                                    </option>
+
+                                    <option value="+86">
+                                        🇨🇳 China (+86)
+                                    </option>
+
+                                    <option value="+81">
+                                        🇯🇵 Japan (+81)
+                                    </option>
+
+                                    <option value="+82">
+                                        🇰🇷 South Korea (+82)
+                                    </option>
+
+                                    <option value="+65">
+                                        🇸🇬 Singapore (+65)
+                                    </option>
+
+                                    <option value="+60">
+                                        🇲🇾 Malaysia (+60)
+                                    </option>
+
+                                    <option value="+66">
+                                        🇹🇭 Thailand (+66)
+                                    </option>
+
+                                    <option value="+84">
+                                        🇻🇳 Vietnam (+84)
+                                    </option>
+
+                                    <option value="+62">
+                                        🇮🇩 Indonesia (+62)
+                                    </option>
+
+                                    <option value="+63">
+                                        🇵🇭 Philippines (+63)
+                                    </option>
+
+                                    <option value="+92">
+                                        🇵🇰 Pakistan (+92)
+                                    </option>
+
+                                    <option value="+880">
+                                        🇧🇩 Bangladesh (+880)
+                                    </option>
+
+                                    <option value="+94">
+                                        🇱🇰 Sri Lanka (+94)
+                                    </option>
+
+                                    <option value="+977">
+                                        🇳🇵 Nepal (+977)
+                                    </option>
+
+                                    <option value="+971">
+                                        🇦🇪 UAE (+971)
+                                    </option>
+
+                                    <option value="+966">
+                                        🇸🇦 Saudi Arabia (+966)
+                                    </option>
+
+                                    <option value="+974">
+                                        🇶🇦 Qatar (+974)
+                                    </option>
+
+                                    <option value="+965">
+                                        🇰🇼 Kuwait (+965)
+                                    </option>
+
+                                    <option value="+972">
+                                        🇮🇱 Israel (+972)
+                                    </option>
+
+
+                                    <!-- NORTH AMERICA -->
+
+                                    <option value="+1">
+                                        🇺🇸 USA (+1)
+                                    </option>
+
+                                    <option value="+1">
+                                        🇨🇦 Canada (+1)
+                                    </option>
+
+                                    <option value="+52">
+                                        🇲🇽 Mexico (+52)
+                                    </option>
+
+
+                                    <!-- EUROPE -->
+
+                                    <option value="+44">
+                                        🇬🇧 United Kingdom (+44)
+                                    </option>
+
+                                    <option value="+49">
+                                        🇩🇪 Germany (+49)
+                                    </option>
+
+                                    <option value="+33">
+                                        🇫🇷 France (+33)
+                                    </option>
+
+                                    <option value="+39">
+                                        🇮🇹 Italy (+39)
+                                    </option>
+
+                                    <option value="+34">
+                                        🇪🇸 Spain (+34)
+                                    </option>
+
+                                    <option value="+31">
+                                        🇳🇱 Netherlands (+31)
+                                    </option>
+
+                                    <option value="+32">
+                                        🇧🇪 Belgium (+32)
+                                    </option>
+
+                                    <option value="+41">
+                                        🇨🇭 Switzerland (+41)
+                                    </option>
+
+                                    <option value="+43">
+                                        🇦🇹 Austria (+43)
+                                    </option>
+
+                                    <option value="+46">
+                                        🇸🇪 Sweden (+46)
+                                    </option>
+
+                                    <option value="+47">
+                                        🇳🇴 Norway (+47)
+                                    </option>
+
+                                    <option value="+45">
+                                        🇩🇰 Denmark (+45)
+                                    </option>
+
+                                    <option value="+358">
+                                        🇫🇮 Finland (+358)
+                                    </option>
+
+                                    <option value="+353">
+                                        🇮🇪 Ireland (+353)
+                                    </option>
+
+                                    <option value="+351">
+                                        🇵🇹 Portugal (+351)
+                                    </option>
+
+                                    <option value="+30">
+                                        🇬🇷 Greece (+30)
+                                    </option>
+
+                                    <option value="+48">
+                                        🇵🇱 Poland (+48)
+                                    </option>
+
+                                    <option value="+7">
+                                        🇷🇺 Russia (+7)
+                                    </option>
+
+                                    <option value="+380">
+                                        🇺🇦 Ukraine (+380)
+                                    </option>
+
+
+                                    <!-- OCEANIA -->
+
+                                    <option value="+61">
+                                        🇦🇺 Australia (+61)
+                                    </option>
+
+                                    <option value="+64">
+                                        🇳🇿 New Zealand (+64)
+                                    </option>
+
+
+                                    <!-- AFRICA -->
+
+                                    <option value="+27">
+                                        🇿🇦 South Africa (+27)
+                                    </option>
+
+                                    <option value="+20">
+                                        🇪🇬 Egypt (+20)
+                                    </option>
+
+                                    <option value="+234">
+                                        🇳🇬 Nigeria (+234)
+                                    </option>
+
+                                    <option value="+254">
+                                        🇰🇪 Kenya (+254)
+                                    </option>
+
+                                    <option value="+212">
+                                        🇲🇦 Morocco (+212)
+                                    </option>
+
+
+                                    <!-- SOUTH AMERICA -->
+
+                                    <option value="+55">
+                                        🇧🇷 Brazil (+55)
+                                    </option>
+
+                                    <option value="+54">
+                                        🇦🇷 Argentina (+54)
+                                    </option>
+
+                                    <option value="+56">
+                                        🇨🇱 Chile (+56)
+                                    </option>
+
+                                    <option value="+57">
+                                        🇨🇴 Colombia (+57)
+                                    </option>
+
+                                </select>
+
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Phone Number"
+                                    inputmode="numeric"
+                                    autocomplete="tel-national"
+                                    required
+                                    aria-label="Phone number">
+
+                            </div>
 
                         </div>
+
+
+                        <!-- FULL INTERNATIONAL NUMBER -->
+
+                        <input
+                            type="hidden"
+                            id="full-phone"
+                            name="full_phone">
 
 
                         <!-- REQUIREMENT -->
@@ -295,7 +563,9 @@
                                 value=""
                                 selected
                                 disabled>
+
                                 Select Requirement
+
                             </option>
 
                             <option value="Software Development">
@@ -329,6 +599,7 @@
 
                         <div class="fields">
 
+
                             <!-- ESTIMATED BUDGET -->
 
                             <select
@@ -339,7 +610,9 @@
                                     value=""
                                     selected
                                     disabled>
+
                                     Estimated Budget
+
                                 </option>
 
                                 <option value="Under $2,000">
@@ -375,7 +648,9 @@
                                     value=""
                                     selected
                                     disabled>
+
                                     Project Timeline
+
                                 </option>
 
                                 <option value="ASAP">
@@ -609,11 +884,9 @@
                 <span>
 
                     ©
-
                     <span data-year></span>
 
                     VTI-Infinix Private Limited.
-
                     All rights reserved.
 
                 </span>
@@ -644,23 +917,36 @@
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            const form = document.querySelector("[data-demo-form]");
+            const form =
+                document.querySelector("[data-demo-form]");
 
             if (!form) {
                 return;
             }
 
-            const phone = form.querySelector('input[name="phone"]');
-            const service = form.querySelector('select[name="service"]');
-            const budget = form.querySelector('select[name="budget"]');
-            const timeline = form.querySelector('select[name="timeline"]');
-            const status = form.querySelector(".form-status");
+            const country =
+                form.querySelector("#country");
+
+            const phone =
+                form.querySelector("#phone");
+
+            const fullPhone =
+                form.querySelector("#full-phone");
+
+            const service =
+                form.querySelector('select[name="service"]');
+
+            const budget =
+                form.querySelector('select[name="budget"]');
+
+            const timeline =
+                form.querySelector('select[name="timeline"]');
 
 
             /* =============================================
-               PHONE NUMBER
+               PHONE INPUT
                ONLY NUMBERS
-               MAXIMUM 10 DIGITS
+               MAXIMUM 15 DIGITS
             ============================================== */
 
             if (phone) {
@@ -669,7 +955,7 @@
 
                     this.value = this.value
                         .replace(/\D/g, "")
-                        .slice(0, 10);
+                        .slice(0, 15);
 
                 });
 
@@ -684,7 +970,7 @@
 
                         input.value = input.value
                             .replace(/\D/g, "")
-                            .slice(0, 10);
+                            .slice(0, 15);
 
                     }, 0);
 
@@ -697,14 +983,13 @@
 
                     event.preventDefault();
 
-                    const input = this;
-                    const text = event.dataTransfer.getData("text");
+                    const text =
+                        event.dataTransfer.getData("text");
 
-                    input.value = (
-                        input.value + text
-                    )
-                        .replace(/\D/g, "")
-                        .slice(0, 10);
+                    this.value =
+                        (this.value + text)
+                            .replace(/\D/g, "")
+                            .slice(0, 15);
 
                 });
 
@@ -718,9 +1003,49 @@
             form.addEventListener("submit", function (event) {
 
                 /*
-                 * Stop the form if any required field
-                 * is invalid.
+                 * Phone numbers vary by country.
+                 * Therefore we do not force every country
+                 * to have exactly 10 digits.
                  */
+
+                if (
+                    phone &&
+                    (
+                        phone.value.length < 6 ||
+                        phone.value.length > 15
+                    )
+                ) {
+
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+
+                    phone.setCustomValidity(
+                        "Please enter a valid phone number."
+                    );
+
+                    form.reportValidity();
+
+                    phone.setCustomValidity("");
+
+                    return false;
+                }
+
+
+                /* =========================================
+                   CREATE FULL INTERNATIONAL NUMBER
+                ========================================== */
+
+                if (country && phone && fullPhone) {
+
+                    fullPhone.value =
+                        country.value + phone.value;
+
+                }
+
+
+                /* =========================================
+                   REQUIRED FIELD VALIDATION
+                ========================================== */
 
                 if (!form.checkValidity()) {
 
@@ -734,34 +1059,12 @@
 
 
                 /* =========================================
-                   EXTRA PHONE VALIDATION
-                ========================================== */
-
-                if (phone && !/^[0-9]{10}$/.test(phone.value)) {
-
-                    event.preventDefault();
-                    event.stopImmediatePropagation();
-
-                    phone.setCustomValidity(
-                        "Please enter a valid 10-digit phone number."
-                    );
-
-                    form.reportValidity();
-
-                    phone.setCustomValidity("");
-
-                    return false;
-                }
-
-
-                /* =========================================
-                   REQUIREMENT VALIDATION
+                   REQUIREMENT
                 ========================================== */
 
                 if (service && service.value === "") {
 
                     event.preventDefault();
-                    event.stopImmediatePropagation();
 
                     service.setCustomValidity(
                         "Please select a requirement."
@@ -776,13 +1079,12 @@
 
 
                 /* =========================================
-                   BUDGET VALIDATION
+                   BUDGET
                 ========================================== */
 
                 if (budget && budget.value === "") {
 
                     event.preventDefault();
-                    event.stopImmediatePropagation();
 
                     budget.setCustomValidity(
                         "Please select an estimated budget."
@@ -797,13 +1099,12 @@
 
 
                 /* =========================================
-                   TIMELINE VALIDATION
+                   TIMELINE
                 ========================================== */
 
                 if (timeline && timeline.value === "") {
 
                     event.preventDefault();
-                    event.stopImmediatePropagation();
 
                     timeline.setCustomValidity(
                         "Please select a project timeline."
