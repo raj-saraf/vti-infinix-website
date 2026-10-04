@@ -115,6 +115,7 @@
     </header>
 
 
+
     <!-- =====================================================
          MAIN
     ====================================================== -->
@@ -149,6 +150,7 @@
             </div>
 
         </section>
+
 
 
         <!-- =================================================
@@ -264,6 +266,7 @@
                 </div>
 
 
+
                 <!-- =========================================
                      CONTACT FORM
                 ========================================== -->
@@ -287,14 +290,19 @@
                                 autocomplete="name"
                                 required>
 
+                            <!-- EMAIL -->
                             <input
                                 type="email"
+                                id="email"
                                 name="email"
                                 placeholder="Your Email"
                                 autocomplete="email"
+                                inputmode="email"
+                                maxlength="100"
                                 required>
 
                         </div>
+
 
 
                         <!-- COMPANY + PHONE -->
@@ -318,7 +326,6 @@
                                     class="country-code"
                                     aria-label="Country code"
                                     required>
-
 
                                     <!-- ASIA -->
 
@@ -565,12 +572,14 @@
                         </div>
 
 
+
                         <!-- FULL INTERNATIONAL NUMBER -->
 
                         <input
                             type="hidden"
                             id="full-phone"
                             name="full_phone">
+
 
 
                         <!-- REQUIREMENT -->
@@ -613,6 +622,7 @@
                             </option>
 
                         </select>
+
 
 
                         <!-- BUDGET + TIMELINE -->
@@ -694,12 +704,14 @@
                         </div>
 
 
+
                         <!-- MESSAGE -->
 
                         <textarea
                             name="message"
                             placeholder="Tell us about your requirement..."
                             required></textarea>
+
 
 
                         <!-- SUBMIT -->
@@ -713,6 +725,7 @@
                             <i class="fa-solid fa-paper-plane"></i>
 
                         </button>
+
 
 
                         <!-- FORM STATUS -->
@@ -731,6 +744,7 @@
         </section>
 
     </main>
+
 
 
     <!-- =====================================================
@@ -789,6 +803,7 @@
                 </div>
 
 
+
                 <!-- COMPANY -->
 
                 <div>
@@ -826,6 +841,7 @@
                     </ul>
 
                 </div>
+
 
 
                 <!-- SERVICES -->
@@ -867,6 +883,7 @@
                 </div>
 
 
+
                 <!-- CONTACT -->
 
                 <div>
@@ -902,6 +919,7 @@
             </div>
 
 
+
             <!-- COPYRIGHT -->
 
             <div class="copyright">
@@ -931,11 +949,13 @@
     </footer>
 
 
+
     <!-- =====================================================
          MAIN JAVASCRIPT
     ====================================================== -->
 
     <script src="js/script.js"></script>
+
 
 
     <!-- =====================================================
@@ -952,6 +972,111 @@
             if (!form) {
                 return;
             }
+
+
+            /* =====================================================
+               EMAIL VALIDATION
+            ====================================================== */
+
+            const email =
+                form.querySelector("#email");
+
+            if (email) {
+
+                email.addEventListener(
+                    "input",
+                    function () {
+
+                        /*
+                         * Allow:
+                         * A-Z
+                         * a-z
+                         * 0-9
+                         * .
+                         * _
+                         * %
+                         * +
+                         * -
+                         * @
+                         *
+                         * Block all other special characters.
+                         */
+
+                        this.value =
+                            this.value.replace(
+                                /[^A-Za-z0-9._%+\-@]/g,
+                                ""
+                            );
+
+
+                        /*
+                         * Allow only ONE @
+                         */
+
+                        const atIndex =
+                            this.value.indexOf("@");
+
+                        if (atIndex !== -1) {
+
+                            this.value =
+                                this.value.substring(
+                                    0,
+                                    atIndex + 1
+                                ) +
+                                this.value
+                                    .substring(atIndex + 1)
+                                    .replace(/@/g, "");
+
+                        }
+
+
+                        /*
+                         * Prevent consecutive dots
+                         */
+
+                        this.value =
+                            this.value.replace(
+                                /\.{2,}/g,
+                                "."
+                            );
+
+                    }
+                );
+
+
+                /*
+                 * Validate complete email when
+                 * the user leaves the field.
+                 */
+
+                email.addEventListener(
+                    "blur",
+                    function () {
+
+                        const emailPattern =
+                            /^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+
+                        if (
+                            this.value === "" ||
+                            !emailPattern.test(this.value)
+                        ) {
+
+                            this.setCustomValidity(
+                                "Please enter a valid email address, e.g. name@example.com"
+                            );
+
+                        } else {
+
+                            this.setCustomValidity("");
+
+                        }
+
+                    }
+                );
+
+            }
+
 
 
             const country =
@@ -973,11 +1098,12 @@
                 form.querySelector('select[name="timeline"]');
 
 
+
             /* =====================================================
                PHONE NUMBER RULES
 
                Country code is NOT counted.
-            ===================================================== */
+            ====================================================== */
 
             const phoneRules = {
 
@@ -1259,6 +1385,7 @@
             };
 
 
+
             function getPhoneRules() {
 
                 return phoneRules[country.value] || {
@@ -1267,6 +1394,7 @@
                 };
 
             }
+
 
 
             function cleanPhone() {
@@ -1284,6 +1412,7 @@
                         .slice(0, rules.max);
 
             }
+
 
 
             function updatePhoneRules() {
@@ -1325,6 +1454,7 @@
                 }
 
             }
+
 
 
             /* =====================================================
@@ -1387,6 +1517,7 @@
             }
 
 
+
             /* =====================================================
                COUNTRY CHANGE
             ====================================================== */
@@ -1397,12 +1528,24 @@
                     "change",
                     function () {
 
+                        /*
+                         * Clear old number when
+                         * country is changed.
+                         */
+
+                        phone.value = "";
+
+                        if (fullPhone) {
+                            fullPhone.value = "";
+                        }
+
                         updatePhoneRules();
 
                     }
                 );
 
             }
+
 
 
             /* =====================================================
@@ -1412,6 +1555,7 @@
             updatePhoneRules();
 
 
+
             /* =====================================================
                FORM SUBMIT
             ====================================================== */
@@ -1419,6 +1563,36 @@
             form.addEventListener(
                 "submit",
                 function (event) {
+
+
+                    /* EMAIL VALIDATION */
+
+                    if (email) {
+
+                        const emailPattern =
+                            /^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+                        if (
+                            !emailPattern.test(
+                                email.value
+                            )
+                        ) {
+
+                            event.preventDefault();
+
+                            email.setCustomValidity(
+                                "Please enter a valid email address, e.g. name@example.com"
+                            );
+
+                            form.reportValidity();
+
+                            email.setCustomValidity("");
+
+                            return false;
+
+                        }
+
+                    }
 
 
                     /* PHONE VALIDATION */
@@ -1462,12 +1636,12 @@
 
                             phone.setCustomValidity("");
 
-
                             return false;
 
                         }
 
                     }
+
 
 
                     /* FULL INTERNATIONAL PHONE */
@@ -1485,6 +1659,7 @@
                     }
 
 
+
                     /* GENERAL FORM VALIDATION */
 
                     if (!form.checkValidity()) {
@@ -1496,6 +1671,7 @@
                         return false;
 
                     }
+
 
 
                     /* SERVICE */
@@ -1518,10 +1694,10 @@
 
                         service.setCustomValidity("");
 
-
                         return false;
 
                     }
+
 
 
                     /* BUDGET */
@@ -1544,10 +1720,10 @@
 
                         budget.setCustomValidity("");
 
-
                         return false;
 
                     }
+
 
 
                     /* TIMELINE */
@@ -1569,7 +1745,6 @@
 
 
                         timeline.setCustomValidity("");
-
 
                         return false;
 
